@@ -1,13 +1,7 @@
 <?php
-$host = 'localhost';
-$dbname = 'zoo_encyclopedie'; 
-$username = 'root';
-$password = '';
+$conn = mysqli_connect("localhost", "root", "", "zoo_encyclopedie");
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Erreur de connexion : " . $e->getMessage());
+if (!$conn) {
+    die("Erreur de connexion : " . mysqli_connect_error());
 }
 ?>

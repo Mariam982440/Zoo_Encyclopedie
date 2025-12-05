@@ -8,7 +8,7 @@ desc_hab text
 create table animal(
 id_anl int auto_increment primary key,
 nom_anl varchar(15) not null,
-type_al enum ('Carnivore ','Herbivore' , 'Omnivore') not null,
+type_al enum ('Carnivore','Herbivore' , 'Omnivore') not null,
 img_anl varchar(260) not null,
 habitat_id int, foreign key (habitat_id) references habitat(id_hab)
 );
