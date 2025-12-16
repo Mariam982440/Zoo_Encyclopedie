@@ -1,14 +1,14 @@
 <?php
 require_once 'db.php';
 
-// Vérifier si l'ID existe dans l'URL
+// vérifier si l'ID existe dans l'URL
 if (!isset($_GET['id'])) {
     die("ID manquant.");
 }
 
 $id = intval($_GET['id']);
 
-// 1️⃣ Récupérer le nom de l'image pour la supprimer du dossier
+// récupérer le nom de l'image pour la supprimer du dossier
 $sql_img = "SELECT img_anl FROM animal WHERE id_anl = $id";
 $result = mysqli_query($conn, $sql_img);
 

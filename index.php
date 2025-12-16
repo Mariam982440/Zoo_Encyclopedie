@@ -55,6 +55,10 @@ $result = mysqli_query($conn, $sql);
             </a>
         </div>
 
+        <a href="statistiques.php" class="ml-6 text-gray-600 hover:text-green-700 font-semibold flex items-center gap-1">
+            📊 Statistiques
+        </a>
+
         <div class="hidden md:flex">
             <button data-modal-target="default-modal" data-modal-toggle="default-modal" 
                     class="text-green-700 font-semibold">
@@ -129,7 +133,7 @@ $result = mysqli_query($conn, $sql);
 
 
 
-$result = mysqli_query($conn, $sql);
+// $result = mysqli_query($conn, $sql);
 
 // Vérifier si la requête a réussi
 if (!$result) {
